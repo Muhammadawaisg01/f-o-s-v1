@@ -1,0 +1,5 @@
+This library provides 'UserContextFilter' extending  Spring's 'OncePerRequestFilter'.
+This filter fetches user claims from access JWT token and fills 'UserContextHolder'.
+Default implementation of 'UserContextHolder' contains user ID and has scope 'request'.
+
+To use it just inject 'UserContextHolder' into your component and call: UserContextHolder#getId()

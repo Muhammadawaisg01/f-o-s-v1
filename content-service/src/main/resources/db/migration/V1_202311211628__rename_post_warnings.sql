@@ -1,0 +1,5 @@
+ALTER TABLE IF EXISTS posts
+RENAME COLUMN content_warning TO warnings;
+
+ALTER TABLE IF EXISTS posts
+    ALTER COLUMN warnings SET NOT NULL;

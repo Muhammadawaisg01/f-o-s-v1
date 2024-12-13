@@ -1,0 +1,18 @@
+<configuration>
+  <appender class="ch.qos.logback.core.ConsoleAppender" name="STDOUT">
+    <encoder class="ch.qos.logback.access.PatternLayoutEncoder">
+      <pattern>{
+        "timestamp": "%t{yyyy-MM-dd HH:mm:ss}",
+        "threadName": "%threadName",
+        "requestURL": "%requestURL",
+        "headers": "%header",
+        "requestContent": "%requestContent",
+        "statusCode": "%statusCode",
+        "responseContent": "%responseContent"
+        }
+      </pattern>
+    </encoder>
+  </appender>
+
+  <appender-ref ref="STDOUT"/>
+</configuration>

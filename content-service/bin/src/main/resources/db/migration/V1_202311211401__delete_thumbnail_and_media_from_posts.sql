@@ -1,0 +1,3 @@
+ALTER TABLE IF EXISTS posts
+    DROP COLUMN IF EXISTS thumbnail_url,
+    DROP COLUMN IF EXISTS media_url;
