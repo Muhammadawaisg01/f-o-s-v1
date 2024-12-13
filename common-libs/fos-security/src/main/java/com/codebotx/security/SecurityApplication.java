@@ -8,7 +8,6 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 
-// @EnableDiscoveryClient
 @SpringBootApplication
 // @EnableJpaRepositories(basePackages = "com.codebotx.security.repository") // Explicitly enable repositories
 // @EntityScan(basePackages = "com.codebotx.security.data") // Explicitly scan for entities

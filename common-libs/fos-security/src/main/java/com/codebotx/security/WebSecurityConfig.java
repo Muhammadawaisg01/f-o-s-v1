@@ -89,7 +89,7 @@ public class WebSecurityConfig {
                         "/content-service/api/v1/categories",
                         "/webjars/**").permitAll()
                 .requestMatchers("/api/auth/signup").permitAll()
-                .anyRequest().permitAll());
+                .anyRequest().authenticated());
 
         httpSecurity.authenticationProvider(authenticationProvider());
         httpSecurity.addFilterBefore(authenticationJwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);
