@@ -11,15 +11,13 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Import;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
-import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
-
 
 @SpringBootApplication
 @EnableConfigurationProperties(TopicProperties.class)
 
 // @EnableFeignClients(basePackages = "com.fossm.userservice.authclient")
 
-@ComponentScan(basePackages = {"com.codebotx.security", "com.fossm.userservice" })
+@ComponentScan(basePackages = {"com.fossm.userservice"})
 // @Import(WebSecurityConfig.class)
 // @EnableJpaRepositories(basePackages = {"com.fossm.userservice.repository","com.codebotx.security.repository"})
 // @EntityScan(basePackages = {"com.fossm.userservice.model","com.codebotx.security.model"})

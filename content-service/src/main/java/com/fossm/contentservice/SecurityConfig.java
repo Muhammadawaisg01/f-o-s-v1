@@ -9,7 +9,8 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
-// import com.fossm.contentservice.jwt.AuthFilter;
+import com.fossm.contentservice.jwt.AuthFilter;
+
 
 @Configuration
 @EnableWebSecurity
@@ -17,10 +18,10 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 public class SecurityConfig {
 
 
-    // @Bean
-    // public AuthFilter authenticationJwtTokenFilter() {
-    //     return new AuthFilter();
-    // }
+    @Bean
+    public AuthFilter authenticationJwtTokenFilter() {
+        return new AuthFilter();
+    }
 
 
     @Bean
@@ -30,8 +31,7 @@ public class SecurityConfig {
         httpSecurity.csrf(csrf -> csrf.disable())       // Disable all security
             .authorizeHttpRequests(auth -> auth.anyRequest().permitAll());
 
-
-            // httpSecurity.addFilterBefore(authenticationJwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);
+            httpSecurity.addFilterBefore(authenticationJwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);
 
 
             return httpSecurity.build();

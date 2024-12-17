@@ -9,6 +9,7 @@ import com.fossm.contentservice.dto.request.PostUpdateRequest;
 import com.fossm.contentservice.dto.response.PostReactionResponse;
 import com.fossm.contentservice.dto.user.AvatarProfileDto;
 import com.fossm.contentservice.exception.BadRequestException;
+import com.fossm.contentservice.jwt.AuthFilter;
 import com.fossm.contentservice.mapper.PostMapper;
 import com.fossm.contentservice.model.Content;
 import com.fossm.contentservice.model.Post;
@@ -46,7 +47,7 @@ public class PostFacade {
   private final FileService fileService;
   private final CommentService commentService;
   private final PostMapper postMapper;
-  private final UserContextHolder userContextHolder;
+  private final UserContextHolder userContextHolder = AuthFilter.userContextHolder;
 
   public Page<PostDto> getOwnerPosts(Pageable pageable) {
     var userId = getUserId();

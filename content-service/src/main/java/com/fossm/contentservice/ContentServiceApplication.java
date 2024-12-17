@@ -11,8 +11,6 @@ import org.springframework.context.annotation.ComponentScan;
 @SpringBootApplication
 @EnableConfigurationProperties(TopicProperties.class)
 
-// @ComponentScan(basePackages = {"com.codebotx.security", "com.fossm.contentservice" })
-
 public class ContentServiceApplication {
 
   @PostConstruct

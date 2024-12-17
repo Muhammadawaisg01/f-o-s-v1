@@ -1,0 +1,23 @@
+# spring:
+#   application:
+#     name: api-gateway
+
+#   cloud:
+#     gateway:
+#       discovery:
+#         locator:
+#           enabled: true
+#       routes:
+#         - id: eureka-client-route
+#           uri: lb://EUREKA_CLIENT
+#           predicates:
+#             - Path=/EUREKA_CLIENT/test/me
+
+# eureka:
+#   client:
+#     service-url:
+#       defaultZone: http://localhost:8761/eureka/
+
+
+# server:
+#     port: 9090

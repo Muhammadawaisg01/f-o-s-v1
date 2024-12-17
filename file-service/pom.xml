@@ -27,7 +27,6 @@
     <common.exception.version>0.0.4</common.exception.version>
     <common.logging.version>0.0.1</common.logging.version>
     <common.authorization.version>0.0.1</common.authorization.version>
-    <common.security.version>0.0.1</common.security.version>
   </properties>
   
   <dependencies>
@@ -64,13 +63,6 @@
       <version>${common.authorization.version}</version>
     </dependency>
     
-    <!-- <dependency>
-        <groupId>com.codebotx</groupId>
-        <artifactId>security</artifactId>
-        <version>${common.security.version}</version>
-    </dependency> -->
-
-
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-actuator</artifactId>

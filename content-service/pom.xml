@@ -26,7 +26,6 @@
     <common.exception.version>0.0.4</common.exception.version>
     <common.authorization.version>0.0.1</common.authorization.version>
     <common.openfeign.version>4.0.4</common.openfeign.version>
-    <common.security.version>0.0.1</common.security.version>
   </properties>
 
 
@@ -57,13 +56,7 @@
       <artifactId>authorization</artifactId>
       <version>${common.authorization.version}</version>
     </dependency>
-    
-    <dependency>
-        <groupId>com.codebotx</groupId>
-        <artifactId>security</artifactId>
-        <version>${common.security.version}</version>
-    </dependency>
-  
+      
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-validation</artifactId>
@@ -111,6 +104,23 @@
           <version>0.0.2</version>
           <scope>compile</scope>
       </dependency>
+
+  <dependency>
+        <groupId>io.jsonwebtoken</groupId>
+        <artifactId>jjwt-api</artifactId>
+        <version>0.11.5</version>
+    </dependency>
+    <dependency>
+        <groupId>io.jsonwebtoken</groupId>
+        <artifactId>jjwt-impl</artifactId>
+        <version>0.11.5</version>
+    </dependency>
+    <dependency>
+        <groupId>io.jsonwebtoken</groupId>
+        <artifactId>jjwt-jackson</artifactId>
+        <version>0.11.5</version>
+    </dependency>
+
   </dependencies>
 
   <build>
