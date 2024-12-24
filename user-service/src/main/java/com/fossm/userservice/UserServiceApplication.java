@@ -19,8 +19,6 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @ComponentScan(basePackages = {"com.fossm.userservice"})
 // @Import(WebSecurityConfig.class)
-// @EnableJpaRepositories(basePackages = {"com.fossm.userservice.repository","com.codebotx.security.repository"})
-// @EntityScan(basePackages = {"com.fossm.userservice.model","com.codebotx.security.model"})
 
 public class UserServiceApplication {
 

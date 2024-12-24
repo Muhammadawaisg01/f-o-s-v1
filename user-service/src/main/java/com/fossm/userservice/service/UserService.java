@@ -38,7 +38,7 @@ public class UserService {
     return user;
   }
 
-  //Create  new user
+  //Create new user
   public User save(User user) {
     return repository.save(user);
   }

@@ -11,6 +11,7 @@ import com.fossm.userservice.dto.response.ConnectionResponse;
 import com.fossm.userservice.exception.BadRequestException;
 import com.fossm.userservice.mapper.UserMapper;
 import com.fossm.userservice.model.Connection;
+import com.fossm.userservice.request_filter.AuthFilter;
 import com.fossm.userservice.service.ConnectionService;
 import com.fossm.userservice.service.RoleService;
 import com.fossm.userservice.service.UserService;
@@ -34,7 +35,7 @@ import static java.util.stream.Collectors.toSet;
 @Slf4j
 public class UserFacade {
 
-  private final UserContextHolder userContextHolder;
+  private final UserContextHolder userContextHolder = AuthFilter.userContextHolder;
   private final UserService userService;
   private final RoleService roleService;
   private final ConnectionService connectionService;

@@ -9,7 +9,7 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
-import com.fossm.contentservice.jwt.AuthFilter;
+import com.fossm.contentservice.request_filter.AuthFilter;
 
 
 @Configuration

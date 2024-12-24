@@ -1,7 +1,7 @@
 package com.fossm.contentservice.controller;
 
 import com.fossm.authorization.context.UserContextHolder;
-import com.fossm.contentservice.jwt.AuthFilter;
+import com.fossm.contentservice.request_filter.AuthFilter;
 import com.fossm.contentservice.model.enums.ContentCategory;
 import com.fossm.swagger.controller.CommonController;
 

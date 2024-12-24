@@ -9,7 +9,7 @@ import com.fossm.contentservice.dto.request.PostUpdateRequest;
 import com.fossm.contentservice.dto.response.PostReactionResponse;
 import com.fossm.contentservice.dto.user.AvatarProfileDto;
 import com.fossm.contentservice.exception.BadRequestException;
-import com.fossm.contentservice.jwt.AuthFilter;
+import com.fossm.contentservice.request_filter.AuthFilter;
 import com.fossm.contentservice.mapper.PostMapper;
 import com.fossm.contentservice.model.Content;
 import com.fossm.contentservice.model.Post;

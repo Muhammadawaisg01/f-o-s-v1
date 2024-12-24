@@ -31,7 +31,6 @@
     <module>kafka</module>
     <module>logging</module>
     <module>authorization</module>
-    <module>fos-security</module>
   </modules>
 
   <dependencies>
