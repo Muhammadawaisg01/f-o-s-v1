@@ -80,4 +80,8 @@ public class Notification_Preference_Service {
         return notification_repository.findByNotification(notification);
     }
 
+    List<Notification_Preference> get_All_Notification_Preferences(UUID userId){
+        
+        return preference_repository.findByUserId(userId);
+    }
 }

@@ -1,6 +1,7 @@
 
 package com.fossm.userservice.notifications;
 
+import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.fossm.authorization.context.UserContextHolder;
+import com.fossm.userservice.exception.BadRequestException;
 import com.fossm.userservice.request_filter.AuthFilter;
 
 
@@ -64,13 +66,25 @@ public class NotificationController {
         
         Notification_Type notification_Type = preference_service.get_Notification_by_Name(ENotification.valueOf(notification_name.toUpperCase()));
         if(notification_Type != null){
-            return ResponseEntity.ok(notification_Type) ;
+            return ResponseEntity.ok(notification_Type);
+        // .orElseThrow(() -> {
+        //   var msg = "Unable to retrieve 'username' from context.";
+        //   log.error(msg);
+        //   return new BadRequestException(msg);
+        // });
         }
         else{
             return null;
             // ResponseEntity. notFound() ;
         }
     }
+
+    @GetMapping("/getAll")
+    public List<Notification_Preference> getAllNotification_Preferences(){
+        
+        return preference_service.get_All_Notification_Preferences(userContextHolder.getId().get());
+    }
+
 
 
     // @PostMapping("/initial_preferences")
